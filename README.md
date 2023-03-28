@@ -1,4 +1,4 @@
-# wcgi-rust-template
+# WCGI Template for Rust
 
 [![Continuous integration](https://github.com/wasmerio/wcgi-rust-template/workflows/Continuous%20Integration/badge.svg?branch=main)](https://github.com/wasmerio/wcgi-rust-template/actions)
 
@@ -37,10 +37,10 @@ $ wasmer login $MY_API_TOKEN
 $ wasmer publish .
 ```
 
-You can also use `wasmer run` to test things locally.
+You can also use `wasmer run-unstable` to test things locally.
 
 ```console
-$ wasmer run .
+$ wasmer run-unstable .
 INFO run: wasmer_wasix::runners::wcgi::runner: Starting the server address=127.0.0.1:8000 command_name="server"
 ```
 
@@ -70,4 +70,4 @@ do their best to avoid them, and welcome help in analysing and fixing them.
 
 [api-docs]: https://wasmerio.github.io/wcgi-rust-template
 [crev]: https://github.com/crev-dev/cargo-crev
-[install]:
+[install]: https://docs.wasmer.io/ecosystem/wasmer/getting-started
