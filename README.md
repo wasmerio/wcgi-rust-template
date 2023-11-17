@@ -12,13 +12,13 @@ published to the Wasmer Registry.
 To run this demo, you will need to install [the Wasmer toolchain][install].
 
 ```console
-$ curl https://get.wasmer.io -sSfL | sh
+curl https://get.wasmer.io -sSfL | sh
 ```
 
 Next, make sure you have Rust and its `wasm32-wasi` target installed.
 
 ```console
-$ rustup target add wasm32-wasi
+rustup target add wasm32-wasi
 ```
 
 Now, you can compile the project to WebAssembly.
@@ -33,11 +33,11 @@ build  deps  examples  incremental  wcgi-rust-template.d  wcgi-rust-template.was
 At this point, you would normally publish the package to the Wasmer Registry.
 
 ```console
-$ wasmer login
-$ wasmer publish
+wasmer login
+wasmer publish
 ```
 
-> Please update the default namespace in the `wasmer.toml` file before
+> **Note**: Please update the default namespace in the `wasmer.toml` file before publishing.
 
 You can also use `wasmer run` to test things locally.
 
@@ -46,7 +46,7 @@ $ wasmer run . --net
 INFO run: wasmer_wasix::runners::wcgi::runner: Starting the server address=127.0.0.1:8000 command_name="server"
 ```
 
-> The `--net` flag is required to enable networking support in Wasmer.
+> **Note**: The `--net` flag is required to enable networking support in Wasmer.
 
 ## License
 
