@@ -1,6 +1,6 @@
 [package]
 name = "wasmer/wcgi-rust-template"
-version = "0.1.0"
+version = "0.1.11"
 description = "A template for WCGI applications"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
