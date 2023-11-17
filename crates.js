@@ -1,0 +1,1 @@
+window.ALL_CRATES = ["bytes","cgi","fnv","http","itoa","wcgi_rust_template"];

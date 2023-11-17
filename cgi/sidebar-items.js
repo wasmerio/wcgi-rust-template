@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"externcrate":["http"],"fn":["binary_response","empty_response","err_to_500","handle","html_response","string_response","text_response"],"macro":["cgi_main","cgi_try_main"],"type":["Request","Response"]};
