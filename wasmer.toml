@@ -8,7 +8,7 @@ repository = "https://github.com/wasmerio/wcgi-rust-template"
 
 [[module]]
 name = "server"
-source = "target/wasm32-wasmer-wasi/release/wcgi-rust-template.wasm"
+source = "target/wasm32-wasi/release/wcgi-rust-template.wasm"
 abi = "wasi"
 
 [[command]]
@@ -20,4 +20,4 @@ module = "server"
 wcgi = { dialect = "rfc-3875" }
 
 [command.annotations.wasi]
-env = ['SCRIPT_NAME=wcgi']
+env = ['SCRIPT_NAME=rust_wcgi']
