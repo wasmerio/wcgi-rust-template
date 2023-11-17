@@ -5,7 +5,7 @@
 ([API Docs][api-docs])
 
 This is a template project for creating a WCGI-compatible package that can be
-published to WAPM.
+published to the Wasmer Registry.
 
 ## Getting Started
 
@@ -24,25 +24,29 @@ $ rustup target add wasm32-wasi
 Now, you can compile the project to WebAssembly.
 
 ```console
-$ cargo build --target=wasm32-wasi
-    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
-$ ls target/wasm32-wasi/debug
+$ cargo build --target=wasm32-wasi --release
+    Finished release [optimized] target(s) in 0.00s
+$ ls target/wasm32-wasi/release
 build  deps  examples  incremental  wcgi-rust-template.d  wcgi-rust-template.wasm
 ```
 
-At this point, you would normally publish the package to WAPM.
+At this point, you would normally publish the package to the Wasmer Registry.
 
 ```console
-$ wasmer login $MY_API_TOKEN
-$ wasmer publish .
+$ wasmer login
+$ wasmer publish
 ```
 
-You can also use `wasmer run-unstable` to test things locally.
+> Please update the default namespace in the `wasmer.toml` file before
+
+You can also use `wasmer run` to test things locally.
 
 ```console
-$ wasmer run-unstable .
+$ wasmer run . --net
 INFO run: wasmer_wasix::runners::wcgi::runner: Starting the server address=127.0.0.1:8000 command_name="server"
 ```
+
+> The `--net` flag is required to enable networking support in Wasmer.
 
 ## License
 
@@ -51,7 +55,7 @@ This project is licensed under either of
 - Apache License, Version 2.0, ([LICENSE-APACHE](./LICENSE-APACHE.md) or
   <http://www.apache.org/licenses/LICENSE-2.0>)
 - MIT license ([LICENSE-MIT](./LICENSE-MIT.md) or
-   <http://opensource.org/licenses/MIT>)
+  <http://opensource.org/licenses/MIT>)
 
 at your option.
 
