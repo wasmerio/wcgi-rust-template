@@ -48,6 +48,14 @@ INFO run: wasmer_wasix::runners::wcgi::runner: Starting the server address=127.0
 
 > **Note**: The `--net` flag is required to enable networking support in Wasmer.
 
+Once you have it published you can also deploy it to Wasmer Edge
+
+```console
+wasmer deploy
+```
+
+This will deploy the app to Wasmer Edge. The configuration of your app will reside in the `app.yaml` file.
+
 ## License
 
 This project is licensed under either of
