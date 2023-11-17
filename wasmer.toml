@@ -13,11 +13,11 @@ abi = "wasi"
 
 [[command]]
 name = "server"
-runner = "https://webc.org/runner/wcgi"
 module = "server"
-
-[command.annotations]
-wcgi = { dialect = "rfc-3875" }
+runner = "https://webc.org/runner/wcgi"
 
 [command.annotations.wasi]
-env = ['SCRIPT_NAME=rust_wcgi']
+env = ["SCRIPT_NAME=rust_wcgi"]
+
+[command.annotations.wcgi]
+dialect = "rfc-3875"
